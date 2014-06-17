@@ -8,7 +8,13 @@
     <form name="request" action="http://www.omdbapi.com/" method="get" class="query">
       <fieldset>
         <label>Search here!</label>
-        <input name="t" value="" type="text"></input>
+        <input name="s" value="" type="text"></input><br>
+        <label>Search by exact title</label>
+        <input name="t" value="" type="text"></input><br>
+        <label>Know the year?</label>
+        <input name="y" value="" type="text"></input><br>
+        <label>Add Rotten Tomatoes data?</label>
+        <input name="tomatoes" value="true" type="checkbox"></input><br>
         <input class="submit_button" type="submit"></input>
       </fieldset>
     </form>

@@ -2,9 +2,17 @@
 <html>
   <head>
     <title>Movie Database Search!</title>
-    <script src="js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
   </head>
   <body>
+    <form name="request" action="http://www.omdbapi.com/" method="get" class="query">
+      <fieldset>
+        <label>Search here!</label>
+        <input name="t" value="" type="text"></input>
+        <input class="submit_button" type="submit"></input>
+      </fieldset>
+    </form>
   </body>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/script.js"></script>
 </html>

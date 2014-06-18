@@ -6,17 +6,18 @@
   </head>
   <body>
     <fieldset>
-      <label>Search here!</label><br>
+      <label>General search:</label><br>
       <input name="s" value="" type="text" id="string_search"></input><br>
-      <label>Search by exact title</label><br>
+      <h4>OR</h4>
+      <label>Know the exact title?</label><br>
       <input name="t" value="" type="text" id="title_search"></input><br>
       <label>Know the year?</label><br>
       <input name="y" value="" type="text" id="year_search"></input><br>
-      <label>Add Rotten Tomatoes data?</label>
+      <label>Would you like to add Rotten Tomatoes data?</label>
       <input name="tomatoes" value="true" type="checkbox" id="tomatoes_boolean"></input><br>
       <input id="submit_button" type="submit"></input>
     </fieldset>
-    <h1 id="header">Search Results</h1>
+    <h1 id="header"></h1>
     <div id="results_fill"></div>
   </body>
   <script src="js/jquery-1.11.1.min.js"></script>

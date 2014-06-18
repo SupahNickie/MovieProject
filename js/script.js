@@ -5,8 +5,27 @@ var searchTomatoes = document.getElementById("tomatoes_boolean")
 
 $(document).ready(function () {
   $('#submit_button').click(function() {
+    $('#results_fill').html("");
     $.getJSON( "http://www.omdbapi.com/?s=" + searchString.value + "&t=" + searchTitle.value + "&y=" + searchYear.value + "&tomatoes=" + searchTomatoes, function(data) {
+      if (searchString.value.length > 0) {
         $('#header').html("<h1>" + data.Search[0].Title + "</h1>");
+        $.each(data.Search[0], function(index, value) {
+          if (value == "N/A" || index == "Title") {
+            // Skip
+          } else {
+          $('#results_fill').append("<p>" + index + ": " + value + "</p>");
+          }
+        });
+      } else {
+        $('#header').html("<h1>" + data.Title + "</h1>");
+        $.each(data, function(index, value) {
+          if (value == "N/A" || index == "Title") {
+            // Skip
+          } else {
+            $('#results_fill').append("<p>" + index + ": " + value + "</p>");
+          }
+        });
+      }
     });
   });
 });

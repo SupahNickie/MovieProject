@@ -5,21 +5,19 @@
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
   </head>
   <body>
-    <!-- <form name="request" action="http://www.omdbapi.com/" method="get" class="query"> -->
-    <!-- <form name="request" class="query"> -->
-      <fieldset>
-        <label>Search here!</label><br>
-        <input name="s" value="" type="text" id="string_search"></input><br>
-        <label>Search by exact title</label><br>
-        <input name="t" value="" type="text" id="title_search"></input><br>
-        <label>Know the year?</label><br>
-        <input name="y" value="" type="text" id="year_search"></input><br>
-        <label>Add Rotten Tomatoes data?</label>
-        <input name="tomatoes" value="true" type="checkbox" id="tomatoes_boolean"></input><br>
-        <input id="submit_button" type="submit"></input>
-      </fieldset>
-    <!-- </form> -->
+    <fieldset>
+      <label>Search here!</label><br>
+      <input name="s" value="" type="text" id="string_search"></input><br>
+      <label>Search by exact title</label><br>
+      <input name="t" value="" type="text" id="title_search"></input><br>
+      <label>Know the year?</label><br>
+      <input name="y" value="" type="text" id="year_search"></input><br>
+      <label>Add Rotten Tomatoes data?</label>
+      <input name="tomatoes" value="true" type="checkbox" id="tomatoes_boolean"></input><br>
+      <input id="submit_button" type="submit"></input>
+    </fieldset>
     <h1 id="header">Search Results</h1>
+    <div id="results_fill"></div>
   </body>
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/script.js"></script>

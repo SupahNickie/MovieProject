@@ -13,8 +13,12 @@ $(document).ready(function () {
           $.each(data.Search[index], function(index, value) {
             if (value == "N/A" || index == "Response") {
               // Skip useless information
+            } else if (index == "Title") {
+              $('#results_fill').append("<p><strong>" + index + ": " + value + "</strong></p>");
             } else if (index == "Poster") {
               $('#results_fill').append("<img src=" + value + "</img>");
+            } else if (index == "imdbID") {
+              $('#results_fill').append("<a href='http://www.imdb.com/title/" + value + "'>Link to this result on imdb</a>");
             } else {
               $('#results_fill').append("<p>" + index + ": " + value + "</p>");
             }
@@ -27,7 +31,9 @@ $(document).ready(function () {
             // Skip useless information
           } else if (index == "Poster") {
             $('#results_fill').append("<img src=" + value + "</img>");
-          } else{
+          } else if (index == "imdbID") {
+            $('#results_fill').append("<a href='http://www.imdb.com/title/" + value + "'>Link to this result on imdb</a>");
+          } else {
             $('#results_fill').append("<p>" + index + ": " + value + "</p>");
           }
         });
